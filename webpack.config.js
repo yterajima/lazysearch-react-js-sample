@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -14,6 +15,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname),
     port: 3000,
+    hot: true,
   },
 
   module: {
@@ -42,6 +44,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
-    })
+    }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ]
 };
