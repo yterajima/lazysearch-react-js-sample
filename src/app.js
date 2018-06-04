@@ -1,3 +1,13 @@
-import App from './components/App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Modal from './components/Modal';
+import Style from './assets/stylesheet.css';
 
-console.log('loaded');
+window.onload = () => {
+  Style.use();
+
+  ReactDOM.render(
+    <Modal isActive={false} />,
+    document.getElementById('root')
+  );
+};
