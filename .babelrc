@@ -1,12 +1,19 @@
 {
   'presets': [
-    'react',
-    ['env', {
-      'targets': {
-        'browsers': ['last 3 versions', 'not ie <= 9']
-      },
-      'modules': false
-    }]
+    [
+      'env', {
+        'targets': {
+          'browsers': ['last 3 versions', 'not ie <= 9']
+        },
+        'modules': false
+      }
+    ],
+    'react'
   ],
-  'comments': false
+  'comments': false,
+  'env': {
+    'test': {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
 }
