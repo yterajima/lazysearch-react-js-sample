@@ -56,7 +56,14 @@ export default class Modal extends React.Component {
             <div className="lz-body">
               <div className="lz-results">
                 {this.state.results.map((result) => {
-                  return <Result key={result.id} url={result.url} title={result.title} description={result.description} />
+                  return (
+                    <Result
+                      key={result.id}
+                      url={result.url}
+                      title={result.title}
+                      description={result.description}
+                    />
+                  );
                 })}
               </div>
             </div>

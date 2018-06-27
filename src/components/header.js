@@ -26,9 +26,9 @@ export const Header = (props) => (
 );
 
 Header.propTypes = {
-  keyword: PropTypes.string,
-  changeKeywordHandler: PropTypes.func,
-  searchHandler: PropTypes.func,
-  emptyKeywordHandler: PropTypes.func,
-  closeModal: PropTypes.func
+  keyword: PropTypes.string.isRequired,
+  changeKeywordHandler: PropTypes.func.isRequired,
+  searchHandler: PropTypes.func.isRequired,
+  emptyKeywordHandler: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired
 };

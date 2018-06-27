@@ -12,7 +12,7 @@ export const Result = (props) => (
 );
 
 Result.propTypes = {
-  url: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string
+  url: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 }
