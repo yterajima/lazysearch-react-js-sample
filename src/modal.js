@@ -2,16 +2,14 @@ import React from 'react';
 import { Header } from './components/header';
 import { Result } from './components/result';
 
-class Modal extends React.Component {
+export default class Modal extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       keyword: '',
       visible: false,
       results: [],
     }
-
     this.closeModal = this.closeModal.bind(this);
     this.changeKeyword = this.changeKeyword.bind(this);
     this.emptyKeyword = this.emptyKeyword.bind(this);
@@ -68,5 +66,3 @@ class Modal extends React.Component {
     );
   }
 }
-
-export default Modal;
