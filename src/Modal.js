@@ -1,5 +1,5 @@
 import React from 'react';
-import Result from './result';
+import { Result } from './components/result';
 
 class Modal extends React.Component {
   constructor(props) {
