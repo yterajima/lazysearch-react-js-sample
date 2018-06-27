@@ -1,11 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Result = (props) => (
   <div className="lz-result">
-    <a href={this.props.url}>
-      <h3>{this.props.title}</h3>
-      <span className="url">{this.props.url}</span>
+    <a href={props.url}>
+      <h3>{props.title}</h3>
+      <span className="url">{props.url}</span>
     </a>
-    <div className="desc">{this.props.description}</div>
+    <div className="desc">{props.description}</div>
   </div>
 );
+
+Result.propTypes = {
+  url: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string
+}
