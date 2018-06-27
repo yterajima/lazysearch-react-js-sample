@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Modal from './Modal';
+import Modal from './modal';
 import Style from './assets/stylesheet.css';
 
 window.onload = () => {
