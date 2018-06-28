@@ -2,24 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Roupe } from './roupe';
 
-export const Header = (props) => (
+export const Header = ({ keyword, changeKeywordHandler, searchHandler, emptyKeywordHandler, closeModal }) => (
   <div className="lz-header">
     <form>
       <div className="lz-search">
-        <div className={props.keyword === '' ? 'lz-search-form' : 'lz-search-form has-keyword'}>
+        <div className={keyword === '' ? 'lz-search-form' : 'lz-search-form has-keyword'}>
           <input
             name="keyword"
             type="text"
             className="lz-keyword"
-            value={props.keyword}
-            onChange={props.changeKeywordHandler}
+            value={keyword}
+            onChange={changeKeywordHandler}
           />
-          <button type="submit" className="lz-button" onClick={props.searchHandler}>
+          <button type="submit" className="lz-button" onClick={searchHandler}>
             <Roupe />
           </button>
-          <button type="button" className="lz-x" onClick={props.emptyKeywordHandler}>×</button>
+          <button type="button" className="lz-x" onClick={emptyKeywordHandler}>×</button>
         </div>
-        <a href="#" className="lz-close" onClick={props.closeModal}>close</a>
+        <a href="#" className="lz-close" onClick={closeModal}>close</a>
       </div>
     </form>
   </div>
