@@ -1,12 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Roupe } from './roupe';
+import React from "react";
+import PropTypes from "prop-types";
+import { Roupe } from "./roupe";
 
-export const Header = ({ keyword, changeKeywordHandler, searchHandler, emptyKeywordHandler, closeModal }) => (
+export const Header = ({
+  keyword,
+  changeKeywordHandler,
+  searchHandler,
+  emptyKeywordHandler,
+  closeModal
+}) => (
   <div className="lz-header">
     <form>
       <div className="lz-search">
-        <div className={keyword === '' ? 'lz-search-form' : 'lz-search-form has-keyword'}>
+        <div
+          className={
+            keyword === "" ? "lz-search-form" : "lz-search-form has-keyword"
+          }
+        >
           <input
             name="keyword"
             type="text"
@@ -17,9 +27,13 @@ export const Header = ({ keyword, changeKeywordHandler, searchHandler, emptyKeyw
           <button type="submit" className="lz-button" onClick={searchHandler}>
             <Roupe />
           </button>
-          <button type="button" className="lz-x" onClick={emptyKeywordHandler}>×</button>
+          <button type="button" className="lz-x" onClick={emptyKeywordHandler}>
+            ×
+          </button>
         </div>
-        <a href="#" className="lz-close" onClick={closeModal}>close</a>
+        <a href="#" className="lz-close" onClick={closeModal}>
+          close
+        </a>
       </div>
     </form>
   </div>

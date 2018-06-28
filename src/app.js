@@ -1,20 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from './modal';
-import Style from './assets/stylesheet.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Modal from "./modal";
+import Style from "./assets/stylesheet.css";
 
 window.onload = () => {
   Style.use();
-  const keywordDOM = document.querySelector('[name=keyword]');
+  const keywordDOM = document.querySelector("[name=keyword]");
   let modalRef;
 
   ReactDOM.render(
-    <Modal ref={(c) => modalRef = c} connectedKeywordDOM={keywordDOM} />,
-    document.getElementById('root')
+    <Modal ref={c => (modalRef = c)} connectedKeywordDOM={keywordDOM} />,
+    document.getElementById("root")
   );
 
-  document.querySelector('[type=submit]').addEventListener('click', (event) => {
+  document.querySelector("[type=submit]").addEventListener("click", event => {
     event.preventDefault();
-    modalRef.setState({visible: true, keyword: keywordDOM.value});
+    modalRef.setState({ visible: true, keyword: keywordDOM.value });
   });
 };

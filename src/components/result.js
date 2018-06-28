@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const Result = ({ title, url, description }) => (
   <div className="lz-result">
@@ -15,4 +15,4 @@ Result.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
-}
+};
